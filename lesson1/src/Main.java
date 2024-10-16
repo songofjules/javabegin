@@ -29,18 +29,5 @@ public class Main {
             }
         }
         System.out.printf("output = " + output);
-
-
-       /* if(a > b){
-            System.out.printf("\nSubtracting a-b\n");
-            output = a - b;
-        }else if(a < b){
-            System.out.printf("\nSumming a + b\n");
-            output = a + b;
-        }else{
-            System.out.printf("\nMultiply a*b\n");
-            output = a*b;
-        }
-        System.out.printf("Output is " + output);*/
     }
 }
