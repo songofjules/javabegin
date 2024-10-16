@@ -17,17 +17,27 @@ public class Main {
             a = scanner.nextInt();
             System.out.printf("Second number to sum: ");
             b = scanner.nextInt();
-            System.out.printf("Summing a + b\n");
-            output = a +b;
+            output = sum(a, b);
         }else if(selection == 2){
             System.out.printf("First number to multiply: ");
             a = scanner.nextInt();
             System.out.printf("Multiplier: ");
             b = scanner.nextInt();
-            for(int i=0; i<b; i++){
-                output = output + a;
-            }
+            output= multiply(a, b);
         }
         System.out.printf("output = " + output);
+    }
+
+    public static int sum(int number1, int number2){
+        System.out.printf("Summing a + b\n");
+        return number1 + number2;
+    }
+    public static int multiply(int number1, int number2){
+        int output = 0;
+        System.out.printf("Multiplying a and b\n");
+        for(int i=0; i<number2; i++){
+            output = output + number1;
+        }
+        return output;
     }
 }
