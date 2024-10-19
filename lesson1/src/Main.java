@@ -10,7 +10,11 @@ public class Main {
         int output = 0;
         int selection = 0;
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("select 1 if you want to sum, 2 if you want to multiply and 3 if you want to differentiate: ");
+        System.out.println("1. Sum\n" +
+                "2. Multiply\n" +
+                "3. Difference\n" +
+                "4. Arrays\n" +
+                "Do your selection: ");
         selection = scanner.nextInt();
         if(selection == 1){
             System.out.printf("First number to sum: ");
@@ -24,15 +28,30 @@ public class Main {
             System.out.printf("Multiplier: ");
             b = scanner.nextInt();
             output= multiply(a, b);
-        }
-        else if(selection == 3){
+        }else if(selection == 3){
             System.out.printf("First number to differentiate: ");
             a = scanner.nextInt();
             System.out.printf("2nd number to differentiate: ");
             b = scanner.nextInt();
             output= differentiate(a, b);
+        }else if(selection == 4){
+            int[] array = new int[4];
+            System.out.println("Provide your age: ");
+            array[0] = scanner.nextInt();
+            System.out.println("Provide your brother's age: ");
+            array[1] = scanner.nextInt();
+            System.out.println("Provide your mother's age: ");
+            array[2] = scanner.nextInt();
+            System.out.println("Provide your father's age: ");
+            array[3] = scanner.nextInt();
+            System.out.println("Ages in your family are:");
+            for(int i=0; i<4; i++){
+                System.out.println(array[i]);
+            }
         }
-        System.out.printf("output = " + output);
+       if (selection == 1 || selection == 2 || selection == 3){
+           System.out.printf("output = " + output);
+       }
     }
 
     public static int sum(int number1, int number2){
