@@ -35,18 +35,20 @@ public class Main {
             b = scanner.nextInt();
             output= differentiate(a, b);
         }else if(selection == 4){
-            int[] array = new int[4];
-            System.out.println("Provide your age: ");
-            array[0] = scanner.nextInt();
-            System.out.println("Provide your brother's age: ");
-            array[1] = scanner.nextInt();
-            System.out.println("Provide your mother's age: ");
-            array[2] = scanner.nextInt();
-            System.out.println("Provide your father's age: ");
-            array[3] = scanner.nextInt();
+            int[] ages = new int[4];
+            String[] sentences = {"Provide your age: ",
+                    "Provide your brother's age: ",
+                    "Provide your mother's age: ",
+                    "Provide your father's age: "};
+            for(int i=0; i<4; i++){
+                System.out.println(sentences[i]);
+                ages[i] = scanner.nextInt();
+            }
+
+
             System.out.println("Ages in your family are:");
             for(int i=0; i<4; i++){
-                System.out.println(array[i]);
+                System.out.println(ages[i]);
             }
         }
        if (selection == 1 || selection == 2 || selection == 3){
