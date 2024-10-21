@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         int a = 0;
         int b = 0;
+        int c = 0;
         int output = 0;
         int selection = 0;
         Scanner scanner = new Scanner(System.in);
@@ -14,6 +15,8 @@ public class Main {
                 "2. Multiply\n" +
                 "3. Difference\n" +
                 "4. Arrays\n" +
+                "5. Print 1-10\n" +
+                "6. Sum of numbers till n\n" +
                 "Do your selection: ");
         selection = scanner.nextInt();
         if(selection == 1){
@@ -50,7 +53,21 @@ public class Main {
             for(int i=0; i<4; i++){
                 System.out.println(ages[i]);
             }
+        }else if(selection == 5){
+            System.out.println("Numbers from 1 to 10: ");
+            for(int i=1; i<11; i++){
+                System.out.println(i);
+            }
+        }else if(selection == 6){
+            System.out.println("Provide random natural number: ");
+            c = scanner.nextInt();
+            for(int i=1; i<=c; i++){
+                output = output + i;
+            }
+            System.out.println("Sum of all numbers from 0 to your number are: ");
+            System.out.println(output);
         }
+
        if (selection == 1 || selection == 2 || selection == 3){
            System.out.printf("output = " + output);
        }
