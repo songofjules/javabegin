@@ -17,6 +17,7 @@ public class Main {
                 "4. Arrays\n" +
                 "5. Print 1-10\n" +
                 "6. Sum of numbers till n\n" +
+                "7. Find the highest number in the array\n" +
                 "Do your selection: ");
         selection = scanner.nextInt();
         if(selection == 1){
@@ -66,6 +67,20 @@ public class Main {
             }
             System.out.println("Sum of all numbers from 0 to your number are: ");
             System.out.println(output);
+        }else if(selection ==7){
+            System.out.println("Provide 5 random, natural numbers");
+            int[] numbers = new int[5];
+            for(int i=0; i<5; i++) {
+                System.out.println("Write a number: ");
+                numbers[i] = scanner.nextInt();
+            }
+            int max = 0;
+            for(int i=0; i<5; i++){
+                if (max< numbers[i]) {
+                    max = numbers[i];
+                }
+            }
+            System.out.println("Max number is: " + max);
         }
 
        if (selection == 1 || selection == 2 || selection == 3){
